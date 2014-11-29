@@ -69,8 +69,8 @@ public class LittleKnifeProcessor extends AbstractProcessor {
             }
 
         }
-              // return true if we successfully processed the Annotation.
-        return true;
+              // return false so other rounds can process this Annotation if needed.
+        return false;
     }
 
     private JavaWriter createWriter(String newSourceName) throws IOException {
